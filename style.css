@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*, :root{
+margin: 0;
+padding: 0;
+box-sizing: border-box
+;
+}
+
+
+body{
+    background-color: rgb(224, 224, 224);
+}
+
+#marca{
+    display: block;
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top:50px;
+    padding-top: 10px;
+    
+}
+body img{
+    display: block;
+    
+    margin: 0px auto;
+}
+main{
+    padding: 15px;   
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 50px;
+}
+header{
+    margin-top: 70px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid black; 
+
+}
+header img{
+    display: block;
+    height: 150px;
+    margin: 0px auto;
+    
+}
+#quiz {
+    counter-reset: quiz-item;
+
+}
+header h1{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 24px;
+    
+}
+ .quiz-item{
+    margin-top: 24px;
+    border: 1px solid black;
+    border-radius: 9px;
+    overflow: hidden;
+ }
+
+ .quiz-item h3{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #107c10;
+ }
+ .quiz-item h3::before{
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+
+    background-color:rgb(194, 194, 194);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    flex-shrink: 0;
+ }
+
+ .quiz-item dl {
+    padding: 15px;
+    display: grid;
+    gap: 6px;
+ }
+
+ .quiz-item dl dt{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+ }
+ input{
+    all: unset;
+    border: 1px solid rgb(0, 0, 0);
+     width: 10px;
+     height: 10px;
+     border-radius: 30%;
+     flex-shrink: 0;
+
+ }
+ input:checked{
+    border: 1px solid black;
+ }
+ input:checked:before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color:rgb(1, 179, 24);
+ }
+#acertos {
+    text-align: center;
+    color: aliceblue;
+    background-color:rgb(164, 165, 164);
+    
+
+    /* fixar rodapé*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+}
